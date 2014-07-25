@@ -26,6 +26,8 @@ app.controller("AssociationCtrl", function($scope, AssociationService) {
     };
 
     $scope.closeTab = function(index) {
-        $scope.tabs.splice(index,1);
+        if ( $scope.tabs.length > 1 ) {
+            $scope.tabs.splice(index,1);
+        }
     };
 });
