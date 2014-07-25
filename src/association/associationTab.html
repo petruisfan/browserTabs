@@ -1,0 +1,23 @@
+
+<div style="padding: 20px;">
+    <ul class="nav nav-tabs" role="tablist">
+        <li ng-repeat="tab in tabs  track by $index"
+            ng-class="{active: $index === activeTab}">
+            <a ng-href="{{ tab.href }}" ng-click="activeTab = $index">{{ tab.title }}</a>
+        </li>
+        <li><a href="#/association" ng-click="addNewTab()"><span class="glyphicon glyphicon-plus"></span></a></li>
+    </ul>
+
+    <div ui-view>
+        <div class="row" style="padding: 25px;">
+            <div class="col-sm-3" ng-repeat="association in associations">
+                <a ng-href="#/association/{{association.id}}">
+                    <img src="images/generic_profile.gif" alt=""/>
+                    <div class="caption">
+                        <h3>{{ association.name }}</h3>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
