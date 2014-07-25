@@ -21,4 +21,7 @@ app.controller("AssociationCtrl", function($scope, AssociationService) {
         $scope.activeTab = index - 1;
     }
 
+    $scope.activateTab = function(index) {
+        $scope.activeTab = index;
+    }
 });
