@@ -19,9 +19,13 @@ app.controller("AssociationCtrl", function($scope, AssociationService) {
     $scope.addNewTab = function() {
         var index = insertNewTab();
         $scope.activeTab = index - 1;
-    }
+    };
 
     $scope.activateTab = function(index) {
         $scope.activeTab = index;
-    }
+    };
+
+    $scope.closeTab = function(index) {
+        $scope.tabs.splice(index,1);
+    };
 });

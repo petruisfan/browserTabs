@@ -3,7 +3,10 @@
     <ul class="nav nav-tabs" role="tablist">
         <li ng-repeat="tab in tabs  track by $index"
             ng-class="{active: $index === activeTab}">
-            <a ng-href="{{ tab.href }}" ng-click="activateTab($index)">{{ tab.title }}</a>
+            <a ng-href="{{ tab.href }}" ng-click="activateTab($index)">
+                <button type="button" class="close" ng-click="closeTab($index)"><span>&times;</span></button>
+                {{ tab.title }}&nbsp;&nbsp;
+            </a>
         </li>
         <li><a href="#/association" ng-click="addNewTab()"><span class="glyphicon glyphicon-plus"></span></a></li>
     </ul>
