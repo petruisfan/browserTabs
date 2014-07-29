@@ -1,0 +1,30 @@
+{
+  "name": "browserTabs",
+  "version": "0.0.0",
+  "description": "browserTabs ===========",
+  "main": "src/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/petruisfan/browserTabs.git"
+  },
+  "keywords": [
+    "angular",
+    "bootstrap",
+    "tabs",
+    "browser"
+  ],
+  "author": "Petru Isfan",
+  "license": "Apache2",
+  "bugs": {
+    "url": "https://github.com/petruisfan/browserTabs/issues"
+  },
+  "homepage": "https://github.com/petruisfan/browserTabs",
+  "devDependencies": {
+    "gulp": "^3.8.6",
+    "gulp-concat": "^2.3.4",
+    "gulp-uglify": "^0.3.1"
+  }
+}
