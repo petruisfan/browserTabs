@@ -35,4 +35,4 @@
     AssociationCtrl.$inject = ["$scope", "AssociationService"];
 
     app.controller("AssociationCtrl", AssociationCtrl);
-}(angular.module("app")))
+}(angular.module("app")));

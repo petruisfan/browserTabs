@@ -1,7 +1,7 @@
 (function(app){
     "use strict";
 
-    app.factory("AssociationService", function() {
+    var AssociationService = function() {
         var _data = [
             {id: 1, name: "Association1"},
             {id: 2, name: "Association2"},
@@ -18,5 +18,8 @@
                 return _data[ id - 1 ];
             }
         }
-    })
+    };
+
+    app.factory("AssociationService", AssociationService);
+
 }(angular.module("app")));

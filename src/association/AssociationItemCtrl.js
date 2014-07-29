@@ -1,7 +1,7 @@
 (function(app){
     "use strict";
 
-    app.controller("AssociationItemCtrl", function($scope, $stateParams, AssociationService) {
+    var AssociationItemCtrl = function($scope, $stateParams, AssociationService) {
         $scope.id = +$stateParams.item;
 
         $scope.association = AssociationService.get($scope.id);
@@ -12,5 +12,9 @@
         };
 
         setTab($scope.association);
-    });
+    };
+
+    AssociationItemCtrl.$inject = ["$scope", "$stateParams", "AssociationService"];
+
+    app.controller("AssociationItemCtrl", AssociationItemCtrl);
 }(angular.module("app")));
